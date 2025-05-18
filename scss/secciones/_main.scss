@@ -1,0 +1,79 @@
+@use '../utilidades/variables' as v;
+@use '../utilidades/mixins' as m;
+
+.seccion-1-main-index {
+    padding: 2rem 2rem 8rem 2rem;
+    background-color: v.$negro-profundo;
+
+    .div-1-seccion-1-index {
+
+        .titulo-1-main-index {
+            color: v.$blanco;
+            font-size: 2rem;
+            padding: 1rem;
+        }
+
+        .texto-1-main-index {
+            color: v.$blanco;
+            font-size: 1.3rem;
+        }
+    }
+
+    .div-2-seccion-1-index {
+        text-align: center;
+        padding-bottom: 3rem;
+
+        .titulo-2-main-index {
+            color: v.$blanco-crema;
+            padding-top: 2rem;
+            padding-bottom: 1.2rem;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .boton-1-main-index {
+            font-size: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: v.$blanco-crema;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            background-color: v.$rojo-claro;
+        }
+    }
+}
+
+.seccion-2-main-index {
+    padding: 2rem;
+    background-color: v.$blanco-crema;
+    top: -3rem;
+
+    .enalce-seccion {
+        text-decoration: none;
+
+        .div-seccion-2-index {
+            position: relative;
+            top: -7rem;
+            margin-bottom: 2rem;
+            border-radius: .5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            background-color: v.$blanco;
+
+            .titulo-div-seccion-2-index {
+                color: v.$negro;
+                font-size: 1.8rem;
+                padding-left: 1.2rem;
+            }
+
+            .texto-div-seccion-2-index {
+                color: v.$gris-oscuro;
+                font-size: 1.3rem;
+                padding: 0 0 1.5rem 1rem;
+            }
+        }
+
+        .imagen-seccion-2 {
+            width: 100%;
+        }
+    }
+}

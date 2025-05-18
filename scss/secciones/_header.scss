@@ -2,62 +2,114 @@
 @use '../utilidades/mixins' as m;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
-    background-color: v.$negro;
-    font-family: v.$Inter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: v.$negro;
+  font-family: v.$Inter;
 
-.titulo-1 {
+  .titulo-header-1 {
     font-size: 40px;
     color: v.$blanco;
-}
+    span {
+        color: v.$rojo;
+    }
+  }
 
-.nav-list {
+  .nav-list {
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: end;
+    gap: 2rem;
 
     a {
-        text-decoration: none;
-        color: v.$blanco-crema;
+      text-decoration: none;
+      color: v.$blanco-crema;
     }
-}
 
-.abrir-menu {
-    display: none;
-}
+    .enlace:hover {
+      color: v.$blanco-crema-rosada-fuerte;
+    }
+  }
 
-@include m.telefono {
-    // .abrir-menu {
-    //     display: block;
-    // }
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 2.25rem;
+    color: v.$blanco-crema;
+    cursor: pointer;
+    background-color: v.$negro;
+  }
 
-    // .nav {
-    //     display: none;
-    // }
+  .cerrar-menu {
+    background-color: v.$gris-carbon;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: v.$gris-carbon;
+    padding: 2rem;
+    padding-top: 1.7rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    &.ocultar {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  // 📱 A partir de cierto ancho (min-width)
+  @include m.telefono {
+    .abrir-menu,
+    .cerrar-menu {
+      display: none;
+    }
 
     .nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: v.$gris-carbon;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
     }
 
     .nav-list {
-        flex-direction: column;
-        align-items: end;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
     }
+  }
 }
-}
-
