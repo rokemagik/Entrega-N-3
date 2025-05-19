@@ -1,22 +1,17 @@
 @use '../utilidades/variables' as v;
 
-/* Reset para móviles */
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Bloquea desplazamiento horizontal */
+    overflow-x: hidden !important; /* Bloquea desplazamiento horizontal */
     margin: 0;
     padding: 0;
+    touch-action: pan-y; /* Desactiva zoom gestual */
+    position: relative;
 }
 
-/* Contenedor principal */
-.container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px; /* Ajusta según necesites */
-}
-
-/* Imágenes y elementos flexibles */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
+* {
+    box-sizing: border-box; /* Evita que padding/margin rompan el ancho */
+    max-width: 100%; /* Fuerza a los elementos a respetar el ancho */
+    margin: 0;
+    padding: 0;
 }
