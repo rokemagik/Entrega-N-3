@@ -378,6 +378,13 @@ main .seccion-3-main-index .div-seccion-3-index .div-2-seccion-3-index .texto-3-
     max-width: 1200px;
   }
 }
+main .texto-2-main-contacto {
+  position: relative;
+  top: -5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #7b7b7b;
+}
 main .seccion-1-main-contacto {
   padding: 2rem 2rem 8rem 2rem;
   background-color: #1E1A1C;
