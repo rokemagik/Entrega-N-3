@@ -1,0 +1,1 @@
+Base basica de pagina web para vender paginas web a diseño de usuarios, bastante basica y por temas de tiempo tuve que sacar una pagina de "Quienes somos", tiene errores como uso de mucho codigo inecesario que no corregi porque ya era tarde pero la tendre en cuenta.
