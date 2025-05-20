@@ -1,0 +1,12 @@
+@use '../utilidades/variables' as v;
+@use '../utilidades/mixins' as m;
+
+footer {
+    background-color: v.$gris-oscuro;
+
+    .titulo-1-footer {
+        text-align: center;
+        padding: 1rem;
+        color: v.$gris-muy-claro;
+    }
+}

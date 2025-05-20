@@ -2,16 +2,17 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden !important; /* Bloquea desplazamiento horizontal */
+    overflow-x: hidden !important; 
     margin: 0;
     padding: 0;
-    touch-action: pan-y; /* Desactiva zoom gestual */
+    touch-action: pan-y; 
     position: relative;
+    background-color: v.$blanco-crema;
 }
 
 * {
-    box-sizing: border-box; /* Evita que padding/margin rompan el ancho */
-    max-width: 100%; /* Fuerza a los elementos a respetar el ancho */
+    box-sizing: border-box;
+    max-width: 100%; 
     margin: 0;
     padding: 0;
 }

@@ -1,79 +1,680 @@
 @use '../utilidades/variables' as v;
 @use '../utilidades/mixins' as m;
 
-.seccion-1-main-index {
-    padding: 2rem 2rem 8rem 2rem;
-    background-color: v.$negro-profundo;
+main {
 
-    .div-1-seccion-1-index {
+    /** Pagina Index **/
 
-        .titulo-1-main-index {
-            color: v.$blanco;
-            font-size: 2rem;
-            padding: 1rem;
-        }
+    .seccion-1-main-index {
+        padding: 2rem 2rem 8rem 2rem;
+        background-color: v.$negro-profundo;
 
-        .texto-1-main-index {
-            color: v.$blanco;
-            font-size: 1.3rem;
-        }
-    }
+        .div-1-seccion-1-index {
 
-    .div-2-seccion-1-index {
-        text-align: center;
-        padding-bottom: 3rem;
+            .titulo-1-main-index {
+                color: v.$blanco;
+                font-size: 2rem;
+                padding: 1rem;
 
-        .titulo-2-main-index {
-            color: v.$blanco-crema;
-            padding-top: 2rem;
-            padding-bottom: 1.2rem;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-
-        .boton-1-main-index {
-            font-size: 1.5rem;
-            text-align: center;
-            text-decoration: none;
-            color: v.$blanco-crema;
-            padding: 0.5rem;
-            border-radius: 1rem;
-            background-color: v.$rojo-claro;
-        }
-    }
-}
-
-.seccion-2-main-index {
-    padding: 2rem;
-    background-color: v.$blanco-crema;
-    top: -3rem;
-
-    .enalce-seccion {
-        text-decoration: none;
-
-        .div-seccion-2-index {
-            position: relative;
-            top: -7rem;
-            margin-bottom: 2rem;
-            border-radius: .5rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            background-color: v.$blanco;
-
-            .titulo-div-seccion-2-index {
-                color: v.$negro;
-                font-size: 1.8rem;
-                padding-left: 1.2rem;
+                @include m.monitor {
+                    font-size: 2.6rem;
+                }
             }
 
-            .texto-div-seccion-2-index {
-                color: v.$gris-oscuro;
+            .texto-1-main-index {
+                color: v.$blanco;
                 font-size: 1.3rem;
-                padding: 0 0 1.5rem 1rem;
+
+                @include m.monitor {
+                    font-size: 1.6;
+                }
+            }
+
+            @include m.monitor {
+                padding: 0 6rem 0 6rem;
             }
         }
 
-        .imagen-seccion-2 {
-            width: 100%;
+        .div-2-seccion-1-index {
+            text-align: center;
+            padding-bottom: 3rem;
+
+            .titulo-2-main-index {
+                color: v.$blanco-crema;
+                padding-top: 2rem;
+                padding-bottom: 1.2rem;
+                text-align: center;
+                font-size: 1.8rem;
+
+                @include m.tablet {
+                    font-size: 2.2rem;
+                }
+            }
+
+            .boton-1-main-index {
+                font-size: 1.5rem;
+                text-align: center;
+                text-decoration: none;
+                color: v.$blanco-crema;
+                padding: 0.5rem;
+                border-radius: 1rem;
+                background-color: v.$rojo-claro;
+
+                &:hover {
+                    color: v.$negro;
+                    background-color: v.$blanco-crema-rosada-fuerte;
+                }
+            }
         }
+        
+        @include m.tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 6rem;
+            padding-bottom: 12rem;
+        }
+
+        @include m.monitor {
+            padding-top: 8rem;
+            padding-bottom: 16rem;
+            justify-content: center;
+            gap: 20rem;
+        }
+    }
+
+    .seccion-2-main-index {
+        padding: 2rem;
+
+        .enalce-seccion {
+            text-decoration: none;
+
+            .div-seccion-2-index {
+                position: relative;
+                top: -7rem;
+                margin-bottom: 2rem;
+                border-radius: .5rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                background-color: v.$blanco;
+
+                .titulo-div-seccion-2-index {
+                    color: v.$negro;
+                    font-size: 1.8rem;
+                    padding-left: 1.2rem;
+                }
+
+                .texto-div-seccion-2-index {
+                    color: v.$gris-oscuro;
+                    font-size: 1.3rem;
+                    padding: 0 0 1.5rem 1rem;
+                }
+
+                @include m.monitor {
+                    top: -9rem
+                    ;
+                }
+            }
+
+            .imagen-seccion-2 {
+                width: 100%;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+
+        @include m.telefono {
+            max-width: 620px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include m.laptop {
+            display: flex;
+            gap: 2rem;
+            max-width: 1100px;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        @include m.monitor {
+            max-width: 1600px;
+        }
+    }
+
+    .texto-2-main-index {
+        position: relative;
+        top: -5rem;
+        text-align: center;
+        font-size: 2rem;
+        color: v.$gris-muy-claro;
+    }
+
+    .seccion-3-main-index {
+
+        .div-seccion-3-index {
+            background-color: v.$gris-carbon;
+            padding: 1rem 1.3rem 3rem 1.3rem;
+            border-top: 6px solid v.$negro-profundo;
+
+            .div-1-seccion-3-index {
+
+                .titulo-3-main-index {
+                    color: v.$blanco-crema-rosada-fuerte;
+                    font-size: 2.5rem;
+                    padding: 1.5rem;
+
+                    @include m.laptop {
+                        font-size: 3rem;
+                    }
+                }
+
+                .texto-3-main-index {
+                    color: v.$blanco-crema-rosada;
+                    text-align: start;
+                    font-size: 1.5rem;
+                    line-height: 1.4;
+
+                    @include m.laptop {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                @include m.telefono {
+                    max-width: 620px;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                @include m.laptop {
+                    padding: 4rem;
+                }
+            }
+
+            .div-2-seccion-3-index {
+                text-align: right;
+
+                .imagen-seccion-3 {
+                    padding: 3rem 0 3rem 0;
+                }
+
+                .boton-2-main-index {
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    color: v.$blanco-crema;
+                    padding: 0.5rem;
+                    margin-right: 2rem;
+                    border-radius: 1rem;
+                    background-color: v.$rojo-claro;
+
+                    &:hover {
+                        color: v.$negro;
+                        background-color: v.$blanco-crema-rosada-fuerte;
+                    }
+
+                    @include m.laptop {
+                        margin: 0;
+                    }
+                }
+
+                .texto-3-main-index {
+                    color: v.$blanco-crema-rosada;
+                    text-align: end;
+                    font-size: 1.5rem;
+                    line-height: 1.4;
+                    padding: 2.5rem 0 5rem 0;
+
+                    @include m.laptop {
+                        padding: 2rem 4rem 4rem 4rem;
+                        text-align: center;
+                    }
+                }
+
+                @include m.telefono {
+                    max-width: 620px;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                @include m.laptop {
+                    text-align: center;
+                    padding: 2rem 2rem 0 2rem;
+                    border-left: 1px solid v.$negro-profundo;
+                }
+            }
+
+            @include m.laptop {
+                display: flex;
+                max-width: 920px;
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 5rem;
+                border-radius: 1rem;
+                border: none;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+                padding: 1rem 1.3rem 1.3rem 1.3rem;
+            }
+
+            @include m.monitor {
+                max-width: 1200px;
+            }
+        }
+    }
+
+
+    /** Pagina Contacto **/
+
+    .seccion-1-main-contacto {
+        padding: 2rem 2rem 8rem 2rem;
+        background-color: v.$negro-profundo;
+
+        .div-1-seccion-1-contacto {
+
+            .titulo-1-main-contacto {
+                color: v.$blanco;
+                font-size: 2rem;
+                padding: 1rem;
+
+                @include m.monitor {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .texto-1-main-contacto {
+                color: v.$blanco;
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+
+                @include m.monitor {
+                    font-size: 1.6;
+                }
+            }
+
+            .datos-1-main-contacto {
+                color: v.$blanco;
+                font-size: 1.2rem;
+                padding: 1.5rem 1rem 1rem 0;
+                margin-bottom: 1rem;
+
+                i {
+                    color: v.$rojo;
+                    padding-right: 1rem;
+                    font-size: 1.5rem
+                }
+                
+                @include m.telefono {
+                    padding-left: 1.5rem;
+                }
+            }
+
+            .div-2-seccion-1-contacto {
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    color: v.$rojo;
+                    font-size: 2.3rem;
+                    padding: 2rem;
+
+                    &:hover {
+                    color: v.$blanco-crema-rosada-fuerte;
+                }
+                }
+
+                @include m.tablet {
+                    justify-content: center;
+                }
+            }
+        }
+
+        .form-seccion-1-contacto {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            text-align: center;
+            padding-bottom: 3rem;
+
+            .input-box {
+
+                input {
+                    width: 100%;
+                    height: 4rem;
+                    padding: 0 1rem;
+                    outline: none;
+                    background-color: rgba(255 255 255 / .1);
+                    border: 3px solid transparent;
+                    letter-spacing: 1px;
+                    color: v.$blanco;
+
+                    @include m.tablet {
+                        width: 80%;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 13rem;
+                    outline: none;
+                    background-color: rgba(255 255 255 / .1);
+                    border: 3px solid transparent;
+                    letter-spacing: 1px;
+                    color: v.$blanco;
+                    padding: 1rem;
+
+                    @include m.tablet {
+                        width: 80%;
+                    }
+                }
+            }
+
+            button {
+                background-color: v.$rojo-claro;
+                color: v.$blanco-crema;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 1rem;
+                padding: 10px;
+
+                &:hover {
+                    color: v.$negro;
+                    background-color: v.$blanco-crema-rosada-fuerte;
+                }
+
+                @include m.tablet {
+                    display: block;
+                    width: 80%;
+                    margin: auto;
+                }
+
+                @include m.monitor {
+                    width: 30%;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        
+        @include m.tablet {
+            padding-top: 6rem;
+            padding-bottom: 12rem;
+        }
+
+        @include m.laptop {
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            padding: 10rem 9rem 10rem 9rem;
+        }
+
+        @include m.monitor {
+            padding-top: 8rem;
+            padding-bottom: 16rem;
+            justify-content: center;
+        }
+    }
+
+
+    /** Pagina Diseños **/
+
+    .seccion-1-main-diseños {
+        padding: 2rem 2rem 8rem 2rem;
+        background-color: v.$negro-profundo;
+
+        .div-1-seccion-1-diseños {
+
+            .titulo-1-main-diseños {
+                color: v.$blanco;
+                font-size: 2rem;
+                padding: 1rem;
+
+                @include m.monitor {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .texto-1-main-diseños {
+                color: v.$blanco;
+                font-size: 1.3rem;
+
+                @include m.monitor {
+                    font-size: 1.6;
+                }
+            }
+
+            @include m.monitor {
+                padding: 0 6rem 0 6rem;
+            }
+        }
+
+        .div-2-seccion-1-diseños {
+            text-align: center;
+            padding-bottom: 3rem;
+
+            .titulo-2-main-diseños {
+                color: v.$blanco-crema;
+                padding-top: 2rem;
+                padding-bottom: 1.2rem;
+                text-align: center;
+                font-size: 1.8rem;
+
+                @include m.tablet {
+                    font-size: 2.2rem;
+                }
+            }
+
+            .boton-1-main-diseños {
+                font-size: 1.5rem;
+                text-align: center;
+                text-decoration: none;
+                color: v.$blanco-crema;
+                padding: 0.5rem;
+                border-radius: 1rem;
+                background-color: v.$rojo-claro;
+
+                &:hover {
+                    color: v.$negro;
+                    background-color: v.$blanco-crema-rosada-fuerte;
+                }
+            }
+        }
+
+        @include m.tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 6rem;
+            padding-bottom: 12rem;
+        }
+
+        @include m.monitor {
+            padding-top: 8rem;
+            padding-bottom: 16rem;
+            justify-content: center;
+            gap: 20rem;
+        }
+    }
+
+    .seccion-2-main-diseños {
+        padding: 2rem;
+
+        .enalce-seccion {
+            text-decoration: none;
+
+            .div-seccion-2-diseños {
+                position: relative;
+                top: -7rem;
+                margin-bottom: 2rem;
+                border-radius: .5rem;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                background-color: v.$blanco;
+
+                .titulo-div-seccion-2-diseños {
+                    color: v.$negro;
+                    font-size: 1.8rem;
+                    padding-left: 1.2rem;
+                }
+
+                .texto-div-seccion-2-diseños {
+                    color: v.$gris-oscuro;
+                    font-size: 1.3rem;
+                    padding: 0 0 1.5rem 1rem;
+                }
+
+                @include m.monitor {
+                    top: -9rem
+                    ;
+                }
+            }
+
+            .imagen-seccion-2 {
+                width: 100%;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+
+        @include m.telefono {
+            max-width: 620px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include m.laptop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        @include m.monitor {
+            max-width: 1600px;
+        }
+    }
+
+    .texto-2-main-diseños {
+        position: relative;
+        top: -5rem;
+        text-align: center;
+        font-size: 2rem;
+        color: v.$gris-muy-claro;
+    }
+
+    /** Pagina Servicios **/
+
+    .seccion-1-main-servicios {
+        padding: 2rem 2rem 4rem 2rem;
+        background-color: v.$negro-profundo;
+
+        .div-1-seccion-1-servicios {
+
+            .titulo-1-main-servicios {
+                color: v.$blanco;
+                font-size: 2rem;
+                padding: 1rem;
+
+                @include m.monitor {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .texto-1-main-servicios {
+                color: v.$blanco;
+                font-size: 1.3rem;
+
+                @include m.monitor {
+                    font-size: 1.6;
+                }
+            }
+
+            @include m.monitor {
+                padding: 0 6rem 0 6rem;
+            }
+        }
+
+        .div-2-seccion-1-servicios {
+            text-align: center;
+            padding-bottom: 3rem;
+
+            .titulo-2-main-servicios {
+                color: v.$blanco-crema;
+                padding-top: 2rem;
+                padding-bottom: 1.2rem;
+                text-align: center;
+                font-size: 1.8rem;
+
+                @include m.tablet {
+                    font-size: 2.2rem;
+                }
+            }
+
+            .boton-1-main-servicios {
+                font-size: 1.5rem;
+                text-align: center;
+                text-decoration: none;
+                color: v.$blanco-crema;
+                padding: 0.5rem;
+                border-radius: 1rem;
+                background-color: v.$rojo-claro;
+
+                &:hover {
+                    color: v.$negro;
+                    background-color: v.$blanco-crema-rosada-fuerte;
+                }
+            }
+        }
+
+        @include m.tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: 6rem;
+            padding-bottom: 12rem;
+        }
+
+        @include m.monitor {
+            padding-top: 8rem;
+            padding-bottom: 16rem;
+            justify-content: center;
+            gap: 20rem;
+        }
+    }
+
+    .seccion-2-main-servicios {
+        padding: 2rem;
+
+        .texto-2-main-servicios {
+            padding: 1rem;
+            font-size: 1.1rem;
+            color: v.$negro;
+
+            @include m.telefono {
+                font-size: 1.3rem;
+            }
+        }
+
+        @include m.telefono {
+            max-width: 620px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include m.laptop {
+            gap: 2rem;
+            max-width: 1100px;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        @include m.monitor {
+            max-width: 1600px;
+        }
+    }
+
+    .texto-2-main-servicios {
+        position: relative;
+        top: -2rem;
+        text-align: center;
+        font-size: 2rem;
+        color: v.$gris-muy-claro;
     }
 }

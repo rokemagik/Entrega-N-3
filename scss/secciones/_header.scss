@@ -32,6 +32,10 @@ header {
     .enlace:hover {
       color: v.$blanco-crema-rosada-fuerte;
     }
+
+    .activo {
+      color: v.$rojo-claro;
+    }
   }
 
   .abrir-menu,
@@ -81,7 +85,6 @@ header {
     }
   }
 
-  // 📱 A partir de cierto ancho (min-width)
   @include m.telefono {
     .abrir-menu,
     .cerrar-menu {
@@ -105,5 +108,9 @@ header {
       align-items: center;
       gap: 2rem;
     }
+  }
+
+  @include m.tablet {
+      justify-content: space-around;
   }
 }

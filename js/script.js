@@ -12,5 +12,5 @@ cerrar.addEventListener("click", () => {
 
     setTimeout(() => {
         nav.classList.remove("visible");
-    }, 300); // duración en ms de la animación (igual al transition)
+    }, 300);
 });
